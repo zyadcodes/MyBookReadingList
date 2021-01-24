@@ -1,0 +1,222 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 100vw;
+  height: 100vh;
+}
+
+.textFieldContainer {
+  width: 50vw;
+  margin-top: 4vh;
+  background-color: white;
+  align-self: center;
+}
+
+.resultsContainer {
+  width: 49.67vw;
+  background-color: white;
+  align-self: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-top-width: 0;
+  border-style: solid;
+  border-bottom-color: blue;
+  border-right-color: blue;
+  border-left-color: blue;
+  z-index: 1;
+}
+
+.eachResultContainer {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  cursor: pointer;
+  border-top-color: gray;
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+.eachResultContainer:hover {
+  opacity: 0.25;
+}
+
+.resultsText {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: end;
+  font-size: 1.5vw;
+}
+
+.authorText {
+  font-size: 1.25vw;
+}
+
+.modalContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: aliceblue;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+  width: 90%;
+  align-self: center;
+}
+
+.verticalSpacer {
+  height: 2vh;
+}
+
+.dropdownContainer {
+  width: 15vw;
+}
+
+.thumbnailStyle {
+  width: auto;
+  height: 13vh;
+}
+
+.bigImageThumbnail {
+  width: auto;
+  height: 20vh;
+}
+
+.bookInfoContainer {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3vh;
+  width: 25vw;
+}
+
+.button {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  outline: none;
+  border-width: 0;
+  transition: transform .2s;
+  color: darkcyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.5);
+}
+
+.gray {
+  background-color: lightgray;
+}
+
+.colorWhite {
+  color: white
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.white {
+  background-color: aliceblue;
+}
+
+.titleText {
+  font-size: 3.5vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  text-align: center;
+  align-self: center;
+  margin-top: 3vh;
+}
+
+.bar {
+  width: 2vw;
+  height: calc(20vh);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.bookListImage {
+  height: 15vh;
+  width: auto;
+}
+
+.textStart {
+  text-align: start;
+}
+
+.bookListContainer {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 100vw;
+  margin-top: 22.5vh;
+}
+
+.bookListItemContainer {
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 2vw;
+  padding-left: -20vw;
+  align-self: center;
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+  width: 70vw;
+  height: 20vh;
+  border-radius: 20px;
+  background-color: white;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.bookListItemContainer:hover {
+  transform: scale(1.12);
+}
