@@ -18,6 +18,7 @@ const App = (props) => {
   const [bookStatus, setBookStatus] = useState("");
   const [bookRating, setBookRating] = useState("");
   const [currentList, setCurrentList] = useState([]);
+  const [notes, setNotes] = useState("");
 
   // Sets the initial user's list
   useEffect(() => {
@@ -43,6 +44,7 @@ const App = (props) => {
       bookClicked,
       bookStatus: bookStatus.value ? bookStatus.value : "",
       bookRating: bookRating.value ? bookRating.value : "",
+      bookNotes: notes ? notes : "",
     };
     setClickVisible(false);
     let newList = currentList;
@@ -145,6 +147,13 @@ const App = (props) => {
                       {eachBook.bookRating ? eachBook.bookRating : "No Rating"}
                     </div>
                   </div>
+                  <div className={"resultsText textStart"}>
+                    <div>Notes</div>
+                    <div className={"verticalSpacer"} />
+                    <div>
+                      {eachBook.bookNotes ? eachBook.bookNotes : "No Additional Notes"}
+                    </div>
+                  </div>
                   <div />
                   <div />
                 </div>
@@ -155,7 +164,7 @@ const App = (props) => {
       <Modal
         visible={clickVisible}
         width="600"
-        height="500"
+        height="675"
         effect="fadeInUp"
         onClickAway={() => setClickVisible(false)}
       >
@@ -174,6 +183,16 @@ const App = (props) => {
                 {bookClicked ? bookClicked.authors[0] : ""}
               </div>
             </div>
+            <div className={"verticalSpacer"} />
+            <button
+              onClick={() => {
+                window.open(bookClicked.infoLink);
+              }}
+              className={"button green"}
+            >
+              View Book
+            </button>
+            <div className={"verticalSpacer"} />
           </div>
           <div className={"inputRow"}>
             <div className={"resultsText"}>Status</div>
@@ -206,6 +225,18 @@ const App = (props) => {
               placeholder="Book Rating"
             />
           </div>
+          <div className={"verticalSpacer"} />
+          <div className={"resultsText"}>Notes</div>
+          <div className={"verticalSpacer"} />
+          <div>
+            <textarea
+              style={{ resize: "none", overflow: "hidden" }}
+              className={"notesSection"}
+              type={"text"}
+              onChange={(event) => setNotes(event.target.value)}
+              value={notes}
+            />
+          </div>
           <div className={"buttonsContainer"}>
             <button
               onClick={() => setClickVisible(false)}
@@ -222,6 +253,7 @@ const App = (props) => {
               Submit
             </button>
           </div>
+          <div className={"verticalSpacer"} />
         </div>
       </Modal>
     </div>
